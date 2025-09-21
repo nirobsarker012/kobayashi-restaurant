@@ -6,7 +6,7 @@ const FoodItem = ({ id, name, price, description, image }) => {
   const { cartItems, addToCart, removeFromCart } = use(StoreContext);
   return (
     <div className="w-full mx-auto rounded-[15px] shadow-lg">
-      <div className="overflow-hidden rotate-[15px] relative">
+      <div className="overflow-hidden rounded-[15px] relative">
         <img
           src={image}
           alt=""
