@@ -1,9 +1,12 @@
 import React, { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import { StoreContext } from "../../components/context/StoreContext";
 
 const Cart = () => {
   const { cartItems, food_list, removeFromCart, getTotalCartAmount } =
     useContext(StoreContext);
+
+  const navigate = useNavigate();
 
   // Check if the cart has any items
   const hasItems = food_list.some((item) => cartItems[item._id] > 0);
@@ -77,17 +80,22 @@ const Cart = () => {
                 <hr className="my-[8px]" />
                 <div className="flex justify-between text-[#555] text-sm sm:text-base">
                   <p>Delivery Fee</p>
-                  <p>${2}</p>
+                  <p>${getTotalCartAmount() === 0 ? 0 : 2}</p>
                 </div>
                 <hr className="my-[8px]" />
                 <div className="flex justify-between text-[#555] text-sm sm:text-base font-semibold">
                   <p>Total</p>
-                  <p>${getTotalCartAmount() + 2}</p>
+                  <b>
+                    ${getTotalCartAmount() === 0 ? 0 : getTotalCartAmount() + 2}
+                  </b>
                 </div>
               </div>
               {/* Checkout btn */}
-              <button className="border-none text-white bg-text-primary w-full sm:w-[200px] py-3 rounded cursor-pointer">
-                Proceed to checkout
+              <button
+                onClick={() => navigate("/order")}
+                className="border-none text-white bg-text-primary w-full sm:w-[200px] py-3 rounded cursor-pointer"
+              >
+                Proceed to Checkout
               </button>
             </div>
 
