@@ -5,8 +5,8 @@ const Navbar = () => {
   const [menu, setMenu] = useState("Home");
   return (
     <nav className="py-[20px] flex justify-between items-center">
-      <img src={assets.logo} alt="logo" className="w-[150px]" />
-      <ul className="flex gap-[20px] text-items text-[18px]">
+      <img src={assets.logo} alt="logo" className="w-[120px] lg:w-[150px]" />
+      <ul className="lg:flex gap-[20px] text-items text-[18px] hidden">
         <li
           onClick={() => setMenu("Home")}
           className={menu === "Home" ? "active" : ""}
@@ -32,13 +32,13 @@ const Navbar = () => {
           Contact US
         </li>
       </ul>
-      <div className="flex items-center gap-[40px]">
+      <div className="flex items-center gap-[20px] lg:gap-[40px]">
         <img src={assets.search_icon} alt="" />
         <div className="relative">
           <img src={assets.basket_icon} alt="" />
           <div className="absolute min-w-[10px] min-h-[10px] bg-[#e84118] -top-4 -right-4 rounded-[5px]"></div>
         </div>
-        <button className="bg-transparent text-[16px] text-items border border-t-amber-700 py-[10px] px-[30px] cursor-pointer rounded-[50px] hover:bg-[#fff4f2] transition-all duration-300">
+        <button className="bg-transparent text-[16px] py-[7px] px-[20px]  text-items border border-t-amber-700 lg:py-[10px] lg:px-[30px] cursor-pointer rounded-[50px] hover:bg-[#fff4f2] transition-all duration-300">
           Sign In
         </button>
       </div>
