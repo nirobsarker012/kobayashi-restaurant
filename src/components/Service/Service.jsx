@@ -32,14 +32,14 @@ const Service = () => {
   };
 
   return (
-    <div className="py-30">
+    <div className="py-10">
       <div className="flex flex-col text-center items-center justify-center my-4">
         <h1 className="font-bold text-4xl lg:text-6xl">Our Services</h1>
         <p className="text-gray-500">
           We proud exceptional services to enhance your dining experiences
         </p>
       </div>
-      <div className="flex flex-wrap items-center justify-center gap-8">
+      <div className="flex flex-wrap items-center justify-center md:gap-3.5 lg:gap-8">
         {serviceData.map((data) => (
           <div
             key={data.id}
