@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { assets } from "../../assets/frontend_assets/assets";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [menu, setMenu] = useState("Home");
@@ -7,30 +8,34 @@ const Navbar = () => {
     <nav className="py-[20px] flex justify-between items-center">
       <img src={assets.logo} alt="logo" className="w-[120px] lg:w-[150px]" />
       <ul className="lg:flex gap-[20px] text-items text-[18px] hidden">
-        <li
-          onClick={() => setMenu("Home")}
+        <Link
+          to={"/"}
+          onCLinkck={() => setMenu("Home")}
           className={menu === "Home" ? "active" : ""}
         >
           Home
-        </li>
-        <li
-          onClick={() => setMenu("Menu")}
+        </Link>
+        <a
+          href="#explore-menu"
+          onCLinkck={() => setMenu("Menu")}
           className={menu === "Menu" ? "active" : ""}
         >
           Menu
-        </li>
-        <li
-          onClick={() => setMenu("Mobile-app")}
+        </a>
+        <a
+          href="#app-download"
+          onCLinkck={() => setMenu("Mobile-app")}
           className={menu === "Mobile-app" ? "active" : ""}
         >
           Mobile-app
-        </li>
-        <li
-          onClick={() => setMenu("Contact US")}
+        </a>
+        <a
+          href="#footer"
+          onCLinkck={() => setMenu("Contact US")}
           className={menu === "Contact US" ? "active" : ""}
         >
           Contact US
-        </li>
+        </a>
       </ul>
       <div className="flex items-center gap-[20px] lg:gap-[40px]">
         <img src={assets.search_icon} alt="" />
