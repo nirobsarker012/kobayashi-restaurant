@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { assets } from "../../assets/frontend_assets/assets";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ setShowLogin }) => {
   const [menu, setMenu] = useState("Home");
   return (
     <nav className="py-[20px] flex justify-between items-center">
@@ -43,7 +43,10 @@ const Navbar = () => {
           <img src={assets.basket_icon} alt="" />
           <div className="absolute min-w-[10px] min-h-[10px] bg-[#e84118] -top-4 -right-4 rounded-[5px]"></div>
         </div>
-        <button className="bg-transparent text-[16px] py-[7px] px-[20px]  text-items border border-t-amber-700 lg:py-[10px] lg:px-[30px] cursor-pointer rounded-[50px] hover:bg-[#fff4f2] transition-all duration-300">
+        <button
+          onClick={() => setShowLogin(true)}
+          className="bg-transparent text-[16px] py-[7px] px-[20px]  text-items border border-t-amber-700 lg:py-[10px] lg:px-[30px] cursor-pointer rounded-[50px] hover:bg-[#fff4f2] transition-all duration-300"
+        >
           Sign In
         </button>
       </div>
