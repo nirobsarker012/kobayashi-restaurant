@@ -3,6 +3,7 @@ import Header from "../../components/Header/Header";
 import ExploreMenu from "../../components/ExploreMenu/ExploreMenu";
 import FoodDisplay from "../../components/FoodDisplay/FoodDisplay";
 import Service from "../../components/Service/Service";
+import Appdownload from "../../components/AppDownload/Appdownload";
 // import Testmonial from "../../components/Tesmonial/Testmonial";
 
 const Home = () => {
@@ -17,6 +18,7 @@ const Home = () => {
         <Testmonial />
       </div> */}
       <Service />
+      <Appdownload />
     </div>
   );
 };

@@ -10,7 +10,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="bg-gradient-to-r from-gray-100 to-gray-200 py-8 border-t-2 border-orange-500">
+    <footer className="bg-gradient-to-r from-gray-100 to-gray-400/50 py-8 border-t-2 border-orange-500">
       <div className="app mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
         <div className="mb-6 md:mb-0">
           <h3 className="text-2xl font-bold text-gray-900">Kobayashi Bites</h3>
@@ -26,7 +26,7 @@ const Footer = () => {
             123 Food Street, Culinary City, CC 12345
           </p>
           <p className="text-gray-600 mt-1">+1 (555) 123-4567</p>
-          <p className="text-gray-600 mt-1">info@deliciousbites.com</p>
+          <p className="text-gray-600 mt-1">info@kobayashibites.com</p>
         </div>
         <div className="mb-6 md:mb-0">
           <h4 className="text-lg font-semibold text-gray-900">Working Hours</h4>
