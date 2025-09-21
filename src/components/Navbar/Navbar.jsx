@@ -6,32 +6,34 @@ const Navbar = ({ setShowLogin }) => {
   const [menu, setMenu] = useState("Home");
   return (
     <nav className="py-[20px] flex justify-between items-center">
-      <img src={assets.logo} alt="logo" className="w-[120px] lg:w-[150px]" />
+      <Link to={"/"}>
+        <img src={assets.logo} alt="logo" className="w-[120px] lg:w-[150px]" />
+      </Link>
       <ul className="lg:flex gap-[20px] text-items text-[18px] hidden">
         <Link
           to={"/"}
-          onCLinkck={() => setMenu("Home")}
+          onClick={() => setMenu("Home")}
           className={menu === "Home" ? "active" : ""}
         >
           Home
         </Link>
         <a
           href="#explore-menu"
-          onCLinkck={() => setMenu("Menu")}
+          onClick={() => setMenu("Menu")}
           className={menu === "Menu" ? "active" : ""}
         >
           Menu
         </a>
         <a
           href="#app-download"
-          onCLinkck={() => setMenu("Mobile-app")}
+          onClick={() => setMenu("Mobile-app")}
           className={menu === "Mobile-app" ? "active" : ""}
         >
           Mobile-app
         </a>
         <a
           href="#footer"
-          onCLinkck={() => setMenu("Contact US")}
+          onClick={() => setMenu("Contact US")}
           className={menu === "Contact US" ? "active" : ""}
         >
           Contact US
@@ -40,7 +42,9 @@ const Navbar = ({ setShowLogin }) => {
       <div className="flex items-center gap-[20px] lg:gap-[40px]">
         <img src={assets.search_icon} alt="" />
         <div className="relative">
-          <img src={assets.basket_icon} alt="" />
+          <Link to={"/cart"}>
+            <img src={assets.basket_icon} alt="" />
+          </Link>
           <div className="absolute min-w-[10px] min-h-[10px] bg-[#e84118] -top-4 -right-4 rounded-[5px]"></div>
         </div>
         <button
